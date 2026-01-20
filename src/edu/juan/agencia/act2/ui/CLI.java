@@ -1,141 +1,100 @@
 package edu.juan.agencia.act2.ui;
 
 import java.util.Scanner;
-import edu.juan.agencia.act2.process.sumador;
-import edu.juan.agencia.act2.process.restador;
+import edu.juan.agencia.act2.process.*;
 
 /**
- * Clase encargada de toda la interacción con el usuario por consola.
+ * Clase encargada de la interacción con el usuario.
+ * Muestra el menú y captura las opciones desde consola.
  */
 public class CLI {
 
-    private final sumador suma;
-    private final restador resta;
-    private final Scanner scanner;
-
     /**
-     * Constructor de la clase CLI
+     * Método que inicia la ejecución de la calculadora
+     * y controla el flujo del programa.
      */
-    public CLI() {
-        suma = new sumador();
-        resta = new restador();
-        scanner = new Scanner(System.in);
-    }
+    public static void iniciar() {
 
-    /**
-     * Inicia el menú principal de la calculadora
-     */
-    public void iniciar() {
-        int opcion;
+        Scanner scanner = new Scanner(System.in);
+        int opcion = -1;
 
-        do {
-            System.out.println("\n=== CALCULADORA SIMPLE ===");
+        Sumador sumador = new Sumador();
+        Restador restador = new Restador();
+        Multiplicador multiplicador = new Multiplicador();
+        Divisor divisor = new Divisor();
+        Modulo modulo = new Modulo();
+        Potenciador potenciador = new Potenciador();
+        Raiz raiz = new Raiz();
+        Logaritmo logaritmo = new Logaritmo();
+
+        while (opcion != 0) {
+
+            System.out.println("\n===== CALCULADORA =====");
             System.out.println("1. Sumar");
             System.out.println("2. Restar");
             System.out.println("3. Multiplicar");
             System.out.println("4. Dividir");
-            System.out.println("5. Potencia");
-            System.out.println("6. Módulo");
-            System.out.println("7. Raíz cuadrada");
-            System.out.println("8. Logaritmo base 10");
+            System.out.println("5. Módulo");
+            System.out.println("6. Potencia");
+            System.out.println("7. Raíz");
+            System.out.println("8. Logaritmo");
             System.out.println("0. Salir");
-            System.out.print("Elige una opción: ");
+            System.out.print("Opción: ");
+
+            if (!scanner.hasNextInt()) {
+                System.out.println("Solo se permiten números");
+                scanner.next();
+                continue;
+            }
 
             opcion = scanner.nextInt();
 
             if (opcion == 0) {
-                System.out.println("👋 Programa terminado");
-                break;
-            }
-
-            if (opcion < 0 || opcion > 8) {
-                System.out.println("❌ Opción no válida");
+                System.out.println("Programa terminado");
                 continue;
             }
 
-            System.out.print("Ingresa el primer número: ");
-            int a = scanner.nextInt();
-
-            int b = 0;
-            if (opcion != 7 && opcion != 8) {
-                System.out.print("Ingresa el segundo número: ");
-                b = scanner.nextInt();
+            if (opcion < 0 || opcion > 8) {
+                System.out.println("Opción inválida");
+                continue;
             }
 
-            ejecutarOperacion(opcion, a, b);
+            System.out.print("num 1: ");
+            int a = scanner.nextInt();
 
-        } while (true);
-    }
+            System.out.print("num 2: ");
+            int b = scanner.nextInt();
 
-    /**
-     * Ejecuta la operación seleccionada por el usuario
-     * @param opcion opción elegida
-     * @param a primer operando
-     * @param b segundo operando
-     */
-    private void ejecutarOperacion(int opcion, int a, int b) {
-        int resultado;
-
-        switch (opcion) {
-            case 1:
-                resultado = suma.sumar(a, b);
-                System.out.println("Resultado: " + resultado);
-                break;
-
-            case 2:
-                resultado = resta.restar(a, b);
-                System.out.println("Resultado: " + resultado);
-                break;
-
-            case 3:
-                resultado = suma.multiplicar(a, b);
-                System.out.println("Resultado: " + resultado);
-                break;
-
-            case 4:
-                resultado = resta.dividir(a, b);
-                if (resultado == -1) {
-                    System.out.println("❌ No se puede dividir entre 0");
-                } else {
-                    System.out.println("Resultado: " + resultado);
+            try {
+                switch (opcion) {
+                    case 1:
+                        System.out.println("Resultado: " + sumador.sumar(a, b));
+                        break;
+                    case 2:
+                        System.out.println("Resultado: " + restador.restar(a, b));
+                        break;
+                    case 3:
+                        System.out.println("Resultado: " + multiplicador.multiplicar(a, b));
+                        break;
+                    case 4:
+                        System.out.println("Resultado: " + divisor.dividir(a, b));
+                        break;
+                    case 5:
+                        System.out.println("Resultado: " + modulo.modulo(a, b));
+                        break;
+                    case 6:
+                        System.out.println("Resultado: " + potenciador.potencia(a, b));
+                        break;
+                    case 7:
+                        System.out.println("Resultado: " + raiz.raiz(a, b));
+                        break;
+                    case 8:
+                        System.out.println("Resultado: " + logaritmo.logaritmo(a, b));
+                        break;
                 }
-                break;
-
-            case 5:
-                resultado = suma.potencia(a, b);
-                if (resultado == -1) {
-                    System.out.println("❌ Exponente inválido");
-                } else {
-                    System.out.println("Resultado: " + resultado);
-                }
-                break;
-
-            case 6:
-                resultado = resta.modulo(a, b);
-                if (resultado == -1) {
-                    System.out.println("❌ No se puede calcular módulo entre 0");
-                } else {
-                    System.out.println("Resultado: " + resultado);
-                }
-                break;
-
-            case 7:
-                resultado = resta.raiz(a);
-                if (resultado == -1) {
-                    System.out.println("❌ No existe raíz de números negativos");
-                } else {
-                    System.out.println("Resultado: " + resultado);
-                }
-                break;
-
-            case 8:
-                resultado = resta.logaritmo(a);
-                if (resultado == -1) {
-                    System.out.println("❌ Logaritmo no válido");
-                } else {
-                    System.out.println("Resultado: " + resultado);
-                }
-                break;
+            } catch (ArithmeticException e) {
+                System.out.println("Error: " + e.getMessage());
+            }
         }
     }
 }
