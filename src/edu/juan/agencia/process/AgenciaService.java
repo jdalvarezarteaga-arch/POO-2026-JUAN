@@ -4,10 +4,25 @@ import edu.juan.agencia.data.Auto;
 import edu.juan.agencia.data.Carrito;
 import java.util.Scanner;
 
+/**
+ *
+ * Esta clase contiene la lógica del sistema de la agencia.
+ * Se encarga del proceso de compra del automóvil y del manejo del carrito.
+ */
 public class AgenciaService {
 
+    /**
+     *
+     * Carrito de compra del sistema
+     */
     private static Carrito carrito = new Carrito();
 
+    /**
+     *
+     * Este método controla el proceso completo de compra de un auto
+     * @param sc lector de datos para la entrada del usuario
+     * @return
+     */
     public static void comprarAuto(Scanner sc) {
 
         sc.nextLine(); // limpiar buffer
@@ -33,12 +48,23 @@ public class AgenciaService {
         seleccionarPago(sc);
     }
 
+    /**
+     *
+     * Este método muestra el ticket de compra
+     * @return
+     */
     public static void verTicket() {
         carrito.mostrarTicket();
     }
 
     // ================= MÉTODOS PRIVADOS =================
 
+    /**
+     *
+     * Este método permite seleccionar la marca del auto
+     * @param sc lector de datos
+     * @return marca seleccionada
+     */
     private static String seleccionarMarca(Scanner sc) {
 
         int op = 0;
@@ -74,6 +100,12 @@ public class AgenciaService {
         return marcas[op - 1];
     }
 
+    /**
+     *
+     * Este método permite seleccionar el año del auto
+     * @param sc lector de datos
+     * @return año seleccionado
+     */
     private static int seleccionarAnio(Scanner sc) {
 
         int anio = 0;
@@ -93,6 +125,14 @@ public class AgenciaService {
         return anio;
     }
 
+    /**
+     *
+     * Este método muestra un menú genérico de opciones
+     * @param sc lector de datos
+     * @param titulo título del menú
+     * @param opciones opciones disponibles
+     * @return opción seleccionada
+     */
     private static String seleccionar(Scanner sc, String titulo, String... opciones) {
 
         int op = 0;
@@ -117,6 +157,12 @@ public class AgenciaService {
         return opciones[op - 1];
     }
 
+    /**
+     *
+     * Este método gestiona la forma de pago del automóvil
+     * @param sc lector de datos
+     * @return
+     */
     private static void seleccionarPago(Scanner sc) {
 
         String pago = seleccionar(sc, "Forma de pago", "Efectivo", "Tarjeta");
