@@ -4,7 +4,7 @@ package edu.juan.agencia.act2.process;
  * Clase encargada de realizar operaciones basadas en la resta.
  * Incluye resta, división, módulo, raíz y logaritmo.
  */
-public class restador {
+public class Restador {
 
     /**
      * Este método recibe 2 operandos enteros y devuelve una resta
