@@ -4,7 +4,7 @@ package edu.juan.agencia.act2.process;
  * Clase encargada de realizar operaciones basadas en la suma.
  * Incluye suma, multiplicación y potencia.
  */
-public class sumador {
+public class Sumador {
 
     /**
      * Este método recibe 2 operandos enteros y devuelve una suma
