@@ -1,4 +1,4 @@
-package edu.juan.agencia.act2.process;
+package edu.juan.agencia.Act2.process;
 
 /**
  * Clase encargada de calcular raíces de índice entero.

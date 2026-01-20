@@ -1,6 +1,6 @@
-package edu.juan.agencia.act2;
+package edu.juan.agencia.Act2;
 
-import edu.juan.agencia.act2.ui.CLI;
+import edu.juan.agencia.Act2.ui.CLI;
 
 /**
  * Clase principal del sistema.

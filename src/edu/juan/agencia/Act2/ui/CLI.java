@@ -1,7 +1,7 @@
-package edu.juan.agencia.act2.ui;
+package edu.juan.agencia.Act2.ui;
 
 import java.util.Scanner;
-import edu.juan.agencia.act2.process.*;
+import edu.juan.agencia.Act2.process.*;
 
 /**
  * Clase encargada de la interacción con el usuario.
