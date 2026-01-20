@@ -3,10 +3,25 @@ package edu.juan.agencia.ui;
 import edu.juan.agencia.process.AgenciaService;
 import java.util.Scanner;
 
+/**
+ *
+ * Esta clase representa la interfaz de usuario por consola (CLI).
+ * Se encarga de mostrar el menú principal y recibir las opciones del usuario.
+ */
 public class CLI {
 
+    /**
+     *
+     * Scanner utilizado para la entrada de datos del usuario
+     */
     static Scanner sc = new Scanner(System.in);
 
+    /**
+     *
+     * Este método inicia el menú principal del sistema.
+     * Controla la navegación y las opciones disponibles.
+     * @return
+     */
     public static void iniciar() {
 
         int opcion = 0;
