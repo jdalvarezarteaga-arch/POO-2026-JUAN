@@ -11,8 +11,8 @@ public class Test_lista_de_empleados {Lista_de_empleados programa = new Lista_de
 
     List<Empleado> listaPrueba = Arrays.asList(
             new Empleado(10000, 20, "Ventas"),
-            new Empleado(30000, 30, "Sistemas"), // Gana > 25k
-            new Empleado(40000, 40, "Sistemas"), // Gana > 25k
+            new Empleado(30000, 30, "Sistemas"), 
+            new Empleado(40000, 40, "Sistemas"), 
             new Empleado(10000, 20, "RH")
     );
 
@@ -90,8 +90,8 @@ public class Test_lista_de_empleados {Lista_de_empleados programa = new Lista_de
         Empleado e4 = new Empleado(1000, 30, "A");
 
 
-        Empleado e5 = new Empleado(5000, 50, "A"); // Edad rara, salario alto
-        Empleado e6 = new Empleado(2000, 60, "A"); // Edad rara, salario BAJO (GANADOR)
+        Empleado e5 = new Empleado(5000, 50, "A"); 
+        Empleado e6 = new Empleado(2000, 60, "A"); 
 
         List<Empleado> lista = Arrays.asList(e1, e2, e3, e4, e5, e6);
 
