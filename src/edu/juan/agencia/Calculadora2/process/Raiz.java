@@ -16,4 +16,3 @@ public class Raiz extends Operacion {
         return resultado;
     }
 }
-
