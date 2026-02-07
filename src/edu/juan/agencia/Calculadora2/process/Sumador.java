@@ -3,7 +3,7 @@ package edu.juan.agencia.Calculadora2.process;
 
 /**
  * Clase que se encargada de realizar la suma.
- */
+ **/
 public class Sumador extends Operacion {
 
     @Override

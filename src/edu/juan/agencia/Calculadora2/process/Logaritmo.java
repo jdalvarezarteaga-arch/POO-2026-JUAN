@@ -2,7 +2,7 @@ package edu.juan.agencia.Calculadora2.process;
 
 /**
  * Clase que se encargada de calcular el logaritmo entero con base variable.
- */
+ **/
 public class Logaritmo extends Operacion {
 
     @Override

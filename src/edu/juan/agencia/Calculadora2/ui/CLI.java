@@ -17,7 +17,7 @@ public class CLI {
             opcion = leerEntero("Opción: ");
 
             if (opcion == 0) {
-                System.out.println("Programa terminado");
+                System.out.println("El Programa a terminado");
                 break;
             }
 

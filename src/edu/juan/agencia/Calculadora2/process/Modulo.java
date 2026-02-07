@@ -2,7 +2,7 @@ package edu.juan.agencia.Calculadora2.process;
 
 /**
  * Clase que se encargada de calcular el módulo usando restas.
- */
+ **/
 public class Modulo extends Operacion {
 
     @Override

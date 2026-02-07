@@ -2,7 +2,7 @@ package edu.juan.agencia.Calculadora2.process;
 
 /**
  * Clase que esta encargada de calcular la raíz entera.
- */
+ **/
 public class Raiz extends Operacion {
 
     @Override

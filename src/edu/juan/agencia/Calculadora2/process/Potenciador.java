@@ -2,7 +2,7 @@ package edu.juan.agencia.Calculadora2.process;
 
 /**
  * Clase encargada de poder calcular la potencia.
- */
+ **/
 public class Potenciador extends Operacion {
 
     @Override
