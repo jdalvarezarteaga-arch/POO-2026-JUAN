@@ -1,7 +1,7 @@
 package edu.juan.agencia.Calculadora2.process;
 
 /**
- * Clase encargada de calcular el módulo usando restas.
+ * Clase que se encargada de calcular el módulo usando restas.
  */
 public class Modulo extends Operacion {
 

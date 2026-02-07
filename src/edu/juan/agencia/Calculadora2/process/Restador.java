@@ -2,7 +2,7 @@ package edu.juan.agencia.Calculadora2.process;
 
 
 /**
- * Clase encargada de realizar la resta.
+ * Clase que se encargada de realizar la resta.
  */
 public class Restador extends Operacion {
 

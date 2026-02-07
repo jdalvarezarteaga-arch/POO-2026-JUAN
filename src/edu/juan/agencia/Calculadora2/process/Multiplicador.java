@@ -1,7 +1,7 @@
 package edu.juan.agencia.Calculadora2.process;
 
 /**
- * Clase encargada de realizar la multiplicación usando sumas.
+ * Clase se encargada de realizar la multiplicación usando sumas.
  */
 public class Multiplicador extends Operacion {
 

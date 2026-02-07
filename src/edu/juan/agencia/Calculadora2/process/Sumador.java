@@ -2,7 +2,7 @@ package edu.juan.agencia.Calculadora2.process;
 
 
 /**
- * Clase encargada de realizar la suma.
+ * Clase que se encargada de realizar la suma.
  */
 public class Sumador extends Operacion {
 

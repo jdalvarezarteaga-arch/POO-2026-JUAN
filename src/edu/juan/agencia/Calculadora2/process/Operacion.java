@@ -2,7 +2,7 @@ package edu.juan.agencia.Calculadora2.process;
 
 
 /**
- * Clase abstracta base para todas las operaciones matemáticas.
+ * Clase abstracta base para todas las operaciones de matemáticas.
  * Define el método que deben implementar las clases hijas.
  */
 public abstract class Operacion {

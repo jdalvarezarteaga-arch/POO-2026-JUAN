@@ -1,7 +1,7 @@
 package edu.juan.agencia.Calculadora2.process;
 
 /**
- * Clase encargada de calcular el logaritmo entero con base variable.
+ * Clase que se encargada de calcular el logaritmo entero con base variable.
  */
 public class Logaritmo extends Operacion {
 

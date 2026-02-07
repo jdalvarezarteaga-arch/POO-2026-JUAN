@@ -1,7 +1,7 @@
 package edu.juan.agencia.Calculadora2.process;
 
 /**
- * Clase encargada de calcular la raíz entera.
+ * Clase que esta encargada de calcular la raíz entera.
  */
 public class Raiz extends Operacion {
 
@@ -16,3 +16,4 @@ public class Raiz extends Operacion {
         return resultado;
     }
 }
+

@@ -1,7 +1,7 @@
 package edu.juan.agencia.Calculadora2.process;
 
 /**
- * Clase encargada de realizar la división usando restas.
+ * Clase que se encargada de realizar la división usando restas.
  */
 public class Divisor extends Operacion {
 

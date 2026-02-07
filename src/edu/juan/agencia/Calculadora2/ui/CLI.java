@@ -3,17 +3,12 @@ package edu.juan.agencia.Calculadora2.ui;
 import edu.juan.agencia.Calculadora2.process.*;
 import java.util.Scanner;
 
-/**
- * Clase encargada de la interacción con el usuario.
- * Muestra el menú y ejecuta las operaciones seleccionadas.
- */
+
 public class CLI {
 
     private static final Scanner scanner = new Scanner(System.in);
 
-    /**
-     * Inicia la calculadora.
-     */
+
     public static void iniciar() {
         int opcion;
 
@@ -81,9 +76,7 @@ public class CLI {
         } while (true);
     }
 
-    /**
-     * Muestra el menú principal.
-     */
+
     private static void mostrarMenu() {
         System.out.println("\n===== CALCULADORA =====");
         System.out.println("1. Sumar");
@@ -97,12 +90,7 @@ public class CLI {
         System.out.println("0. Salir");
     }
 
-    /**
-     * Lee un entero desde consola con validación.
-     *
-     * @param mensaje texto a mostrar
-     * @return número entero válido
-     */
+
     private static int leerEntero(String mensaje) {
         while (true) {
             System.out.print(mensaje);
